@@ -6,8 +6,8 @@
     TRAINER: "sivakumar"
     DURATION: "150HRS"
   tasks:
-  - name : prinit information
-    vars  :
-      course:"Devsecops with AIOPS"
-  - debug:
+  - name: print information
+    vars:
+      COURSE: "DevSecOps with AIOps"
+    debug:
       msg: "Hi, I am learning {{ COURSE }}, Trainer is {{ TRAINER }}, Duration is {{ DURATION }}"
