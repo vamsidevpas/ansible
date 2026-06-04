@@ -1,8 +1,2 @@
 ---
-- name: Demo using group_vars
-  hosts: all
-  tasks:
-    - name: Print common variable
-      ansible.builtin.debug:
-        msg: "common_key is {{ common_key }}"
 common_key: common_value
