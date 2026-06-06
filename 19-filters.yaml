@@ -3,7 +3,27 @@
   connection: local
   vars:
     topics: Linux, Shell, Ansible, Terraform
-    tasks:
+    tagMap:
+      name: Ansible
+      project: roboshop
+      environment: dev
+    full_name: Sivakumar Reddy M
+    ip_address: 178.90.78.17
+    tagsList: [
+        {
+            "key": "name",
+            "value": "Ansible"
+        },
+        {
+            "key": "project",
+            "value": "roboshop"
+        },
+        {
+            "key": "environment",
+            "value": "dev"
+        }
+    ]
+  tasks:
   - name: convert string to list
     debug:
       msg: "Topics are: {{ topics | split(',') }}"
@@ -19,3 +39,15 @@
   - name: convert list to map
     debug:
       msg: "{{ tagsList | items2dict  }}"
+
+  - name: convert to uppercase
+    debug:
+      msg: "{{ full_name | upper }}"
+
+  - name: convert to lowercase
+    debug:
+      msg: "{{ full_name | lower }}"
+
+  - name: check ipv4 address
+    debug:
+      msg: "{{ ip_address | ansible.utils.ipv4 }}"
