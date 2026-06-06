@@ -7,7 +7,11 @@
   - name: convert string to list
     debug:
       msg: "Topics are: {{ topics | split(',') }}"
-
+ 
   - name: set default value
     debug:
       msg: "Hi {{ GREETING | default('Good Morning') }}"
+
+  - name: convert map to list
+    debug:
+      msg: "{{ tagMap | dict2items  }}"
